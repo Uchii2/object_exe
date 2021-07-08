@@ -25,7 +25,7 @@ public class Menu extends JPanel{
 		
 		GridBagConstraints c = new GridBagConstraints();
         
-       JLabel instructions = new JLabel("Welcome");
+       JLabel instructions = new JLabel("ようこそ");
        Myfont.setFontSize(instructions, 30);
        c.insets = new Insets(10,10,10,10);
        c.gridy = 0;
