@@ -37,7 +37,7 @@ public class Options extends JPanel implements ActionListener{
 		
 		String playerName = Frame.getPlayerName();
 		
-		JLabel nameLabel = new JLabel("Set Player Name");
+		JLabel nameLabel = new JLabel("プレイヤーの名前を設定");
 		Myfont.setFontSize(nameLabel, 15);
         c.gridy = 1;
         this.add(nameLabel, c);
@@ -47,19 +47,25 @@ public class Options extends JPanel implements ActionListener{
         c.gridy = 2;
         this.add(nameField, c);
         
-        Button skinButton = new Button("Change Skin");
+        JLabel skinLabel = new JLabel("背景を変更");
+        Button skinButton = new Button("change");
         skinButton.setName("skinButton");
         c.gridy = 3;
-        this.add(skinButton, c);
-
-        Button deleteButton = new Button("Delete scores");
-        deleteButton.setName("deleteButton");
+        this.add(skinLabel, c);
         c.gridy = 4;
+        this.add(skinButton, c);
+        
+        JLabel deleteLabel = new JLabel("スコア履歴を削除");
+        Button deleteButton = new Button("delete");
+        deleteButton.setName("deleteButton");
+        c.gridy = 5;
+        this.add(deleteLabel, c);
+        c.gridy = 6;
         this.add(deleteButton, c);
         
         Button okButton = new Button("OK");
         okButton.setName("okButton");
-        c.gridy = 5;
+        c.gridy = 7;
         this.add(okButton, c);
 		
         Frame frame = Frame.getFrame();
@@ -86,13 +92,13 @@ public class Options extends JPanel implements ActionListener{
 		
 		Button[] buttons = {yes, no}; //this array will be used in the constructor of the JOptionPane
 		
-		JLabel jl = new JLabel("Are you sure ?"); //message displayed on the JOptionPane
+		JLabel jl = new JLabel("削除しますか？"); //message displayed on the JOptionPane
 		Myfont.setMyfont(jl);
 		
 		UIManager.put("OptionPane.background", new Color(253,253,253));
 		UIManager.put("Panel.background", new Color(253,253,253));
 		
-		JOptionPane.showOptionDialog(null, jl, "Delete Scores", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, buttons, buttons[1]);
+		JOptionPane.showOptionDialog(null, jl, "スコア履歴を削除", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, buttons, buttons[1]);
 		
 	}
 	
@@ -102,7 +108,7 @@ public class Options extends JPanel implements ActionListener{
 	public void setPlayerName(){
 		
 		if(Frame.getPlayerName() == "default name")
-			Frame.setPlayerName("Anonymous");
+			Frame.setPlayerName("匿名");
 		else
 			Frame.setPlayerName(nameField.getText());
 		

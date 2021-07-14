@@ -23,7 +23,7 @@ public class Score implements Serializable{
 	 */
 	public String toString(){
 		
-		return playerName + " with " + score + " points \n";
+		return playerName + " : " + score + " ƒ|ƒCƒ“ƒg \n";
 	}
 	
 	public int getScore(){

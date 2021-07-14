@@ -25,23 +25,23 @@ public class Menu extends JPanel{
 		
 		GridBagConstraints c = new GridBagConstraints();
         
-       JLabel instructions = new JLabel("„Çà„ÅÜ„Åì„Åù");
+       JLabel instructions = new JLabel("ÇÊÇ§Ç±Çª");
        Myfont.setFontSize(instructions, 30);
        c.insets = new Insets(10,10,10,10);
        c.gridy = 0;
        this.add(instructions, c);
        
-       Button startButton = new Button("New Game");
+       Button startButton = new Button("start");
        startButton.setName("startButton");
        c.gridy = 2;
        this.add(startButton, c);
        
-       Button optionButton = new Button("Options");
+       Button optionButton = new Button("setting");
        optionButton.setName("optionsButton");
        c.gridy = 3;
        this.add(optionButton, c);
        
-       Button rulesButton = new Button("Rules");
+       Button rulesButton = new Button("rulus");
        rulesButton.setName("rulesButton");
        c.gridy = 4;
        this.add(rulesButton, c);

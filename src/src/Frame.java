@@ -43,7 +43,7 @@ public class Frame extends JFrame implements ActionListener{
 		
 		Frame.frame = this;
 		
-		setTitle("ShooterGame");
+		setTitle("シューティングゲーム");
 		setSize(new Dimension(500, 379));
 		setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -246,7 +246,7 @@ public class Frame extends JFrame implements ActionListener{
 	public static String getPlayerName(){
 		
 		if(playerName == null)
-			return "Anonymous";
+			return "匿名";
 		
 		return playerName;
 		

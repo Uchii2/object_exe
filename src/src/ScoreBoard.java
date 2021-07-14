@@ -63,7 +63,7 @@ public class ScoreBoard extends JPanel implements ActionListener{
 				scorelist.add(new Score("Looser", 0));
 				updateScoreFile();
 			}catch(IOException e){
-				System.out.print("impossible de cr�er le fichier");
+				System.out.print("impossible scorefile");
 			}
 		}
 		
@@ -217,14 +217,14 @@ public class ScoreBoard extends JPanel implements ActionListener{
 			i++;
 		}
 		
-		JLabel js = new JLabel("Best Scores");
+		JLabel js = new JLabel("スコアランキング");
 		Myfont.setMyfont(js);
 		c.gridx = 1;
 		c.gridy = 1;
 		this.add(js, c);
 		
 		if(newRecord && index < 5){ //the new record message is displayed only if there actually is a new record
-			JLabel jr = new JLabel("NEW RECORD");
+			JLabel jr = new JLabel("新記録");
 			jr.setForeground(Color.BLUE);
 			Myfont.setMyfont(jr);
 			c.insets = new Insets(0,0,0,0);
@@ -238,13 +238,13 @@ public class ScoreBoard extends JPanel implements ActionListener{
 		
 		c.insets = new Insets(10,10,10,10);
 		
-		Button tryagainB = new Button("Try Again ?");
+		Button tryagainB = new Button("restart");
 		tryagainB.setName("tryagainB");
 		tryagainB.addActionListener(this);
 		c.gridy = 11;
 		this.add(tryagainB, c);
 		
-		Button optionsButton = new Button("Options");
+		Button optionsButton = new Button("setting");
 		optionsButton.setName("optionsButton");
 		optionsButton.addActionListener(this);
 		c.gridy = 12;

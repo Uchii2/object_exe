@@ -187,13 +187,13 @@ public class Game extends JPanel implements ActionListener{
 		
 		c.insets = new Insets(0,0,0,80);
 		
-		scorelab = new JLabel("Score : " + score);
+		scorelab = new JLabel("スコア : " + score);
 		Myfont.setMyfont(scorelab);
 		c.fill = GridBagConstraints.BOTH;
 		c.gridx = 1;
 		c.anchor = GridBagConstraints.NORTH;
 		scorepan.add(scorelab, c);
-		lifelab = new JLabel("Life : " + life);
+		lifelab = new JLabel("ライフ : " + life);
 		Myfont.setMyfont(lifelab);
 		if(craft.isImmune()) lifelab.setForeground(Color.white);
 		c.insets = new Insets(3,3,3,80);
@@ -323,9 +323,9 @@ public class Game extends JPanel implements ActionListener{
         	g.drawRect(B_WIDTH/2 - 100, B_HEIGHT/2 - 25, 220, 60);
         	Myfont.setGraphicFont(g);
         	g.setColor(Color.white);
-        	g.drawString("Game Paused", B_WIDTH/2 - 60, B_HEIGHT/2);
+        	g.drawString("一時停止中", B_WIDTH/2 - 60, B_HEIGHT/2);
         	Myfont.setGraphicFontSize(g, 10);
-        	g.drawString("Press P to  resume", B_WIDTH/2 - 60, B_HEIGHT/2 + 20);
+        	g.drawString("Pキーを押して再開", B_WIDTH/2 - 60, B_HEIGHT/2 + 20);
         }
         
 	}

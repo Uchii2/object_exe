@@ -42,14 +42,14 @@ public class Rules extends JPanel{
 		Myfont.setMyfont(tab);
 		tab.setBackground(new Color(255,255,255,120));
 		
-		tab.addTab("Commands", tab1);
-		tab.addTab("Bonus effects", tab2);
+		tab.addTab("操作", tab1);
+		tab.addTab("ボーナス効果", tab2);
 		
 		this.add(tab);
 
 		JPanel pan = new JPanel();
 		
-		Button exitButton = new Button("Exit");
+		Button exitButton = new Button("OK");
 		exitButton.setName("exitButton");
 		
 		pan.add(exitButton);
@@ -71,17 +71,17 @@ public class Rules extends JPanel{
 		GridBagConstraints c = new GridBagConstraints();
 		c.insets = new Insets(10,10,10,10);
 		
-		JLabel jinst1 = new JLabel("Use UP and DOWN to move");
+		JLabel jinst1 = new JLabel("矢印キーの上下で移動");
 		Myfont.setMyfont(jinst1);
 		c.gridy = 1;
 		tab1.add(jinst1, c);
 		
-		JLabel jinst2 = new JLabel("Use SPACE to shoot");
+		JLabel jinst2 = new JLabel("スペースキーで攻撃");
 		Myfont.setMyfont(jinst2);
 		c.gridy = 2;
 		tab1.add(jinst2, c);
 		
-		JLabel jinst3 = new JLabel("Use P to pause the game");
+		JLabel jinst3 = new JLabel("Pキーを押して一時停止");
 		Myfont.setMyfont(jinst3);
 		c.gridy = 3;
 		tab1.add(jinst3, c);
@@ -105,7 +105,7 @@ public class Rules extends JPanel{
 		c.gridx = 1;
 		tab2.add(jlab, c);
 		
-		JLabel jlab2 = new JLabel("Upgrade missile");
+		JLabel jlab2 = new JLabel("攻撃を強化する");
 		Myfont.setMyfont(jlab2);
 		c.anchor = GridBagConstraints.WEST;
 		c.gridy = 0;
@@ -114,11 +114,11 @@ public class Rules extends JPanel{
 		
 		ArrayList<JLabel> rules = new ArrayList<JLabel>();
 		
-		rules.add(new JLabel("1: Fire up to 5 missiles"));
-		rules.add(new JLabel("2: Fire infinite missiles"));
-		rules.add(new JLabel("3: Fire missile on two rows"));
-		rules.add(new JLabel("4: Fire on three rows"));
-		rules.add(new JLabel("5: Fire on five rows"));
+		rules.add(new JLabel("1: 5発のミサイルを発射"));
+		rules.add(new JLabel("2: ミサイルを無限に発射"));
+		rules.add(new JLabel("3: 2列のミサイルを発射"));
+		rules.add(new JLabel("4: 3列のミサイルを発射"));
+		rules.add(new JLabel("5: 5列のミサイルを発射"));
 		
 		int i = 0;
 		
@@ -137,7 +137,7 @@ public class Rules extends JPanel{
 		c.gridx = 1;
 		tab2.add(jlab3, c);
 		
-		JLabel jlab4 = new JLabel("Best missile shot");
+		JLabel jlab4 = new JLabel("最高のミサイル");
 		Myfont.setMyfont(jlab4);
 		c.anchor = GridBagConstraints.WEST;
 		c.gridy = 6;
@@ -151,7 +151,7 @@ public class Rules extends JPanel{
 		c.gridx = 1;
 		tab2.add(jlab5, c);
 		
-		JLabel jlab6 = new JLabel("Immune to next damage");
+		JLabel jlab6 = new JLabel("次に受けるダメージを無効化");
 		Myfont.setMyfont(jlab6);
 		c.gridy = 7;
 		c.gridx = 2;
@@ -164,7 +164,7 @@ public class Rules extends JPanel{
 		c.gridx = 1;
 		tab2.add(jlab7, c);
 		
-		JLabel jlab8 = new JLabel("1UP");
+		JLabel jlab8 = new JLabel("ライフを1増やす");
 		Myfont.setMyfont(jlab8);
 		c.gridy = 8;
 		c.gridx = 2;
