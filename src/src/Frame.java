@@ -135,10 +135,17 @@ public class Frame extends JFrame implements ActionListener{
 		
 		if(Frame.getTheme() == "pokemon")
 			Frame.setTheme("theme2");
-		else
+		else if(Frame.getTheme() == "theme2")
+			Frame.setTheme("kikagaku");
+		else if(Frame.getTheme() == "kikagaku")
 			Frame.setTheme("pokemon");
 		
-		
+		/*
+		if(Frame.getTheme() == "pokemon")
+			Frame.setTheme("theme2");
+		else
+			Frame.setTheme("pokemon");
+		*/
 		//a new options panel is created to change its background image
 		options = new Options();
 		content.add(options, "Options");
